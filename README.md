@@ -15,7 +15,7 @@ degrees: 0 is 12:00 and 90 is 3:00
 
 ## **How to use it**
 **1. Environment set up**
-Download requirements.txt. In prompt or terminal:
+Download requirements.txt. In a terminal type the following:
 ```
 conda create --name <env> --file requirements.txt
 ```
