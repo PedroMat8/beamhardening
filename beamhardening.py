@@ -2,11 +2,19 @@
 """
 Created on Fri Feb  5 17:40:26 2021
 
-@author: Matteo
+Applies a beam hardening correction on a given tif sequence.
 
-library for radial profile
+Created on 29/10/2019
+MIT License - Copyright (c) 2021 Matteo Pedrotti
 
-https://pypi.org/project/sectorizedradialprofile/
+@author: PedroMat8
+@email: matteo.pedrotti@strath.ac.uk
+
+Please cite the following:
+GitHub repository: https://github.com/PedroMat8/beamhardening
+
+references:
+library for radial profile: https://pypi.org/project/sectorizedradialprofile/
 """
 
 import os
