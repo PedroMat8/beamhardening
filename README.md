@@ -36,6 +36,6 @@ original tif sequence
 
 ```
 
-**4. Output**
+**5. Output**
 An output folder containing the corrected tif sequence will be created in your
 working directory
