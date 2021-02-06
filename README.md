@@ -28,7 +28,7 @@ In your working folder download the file *beamhardening.py*
 In your working directory create am input folder (i.e. *input*) and store your
 original tif sequence
 
-**4. How to use it
+**4. How to use it**
 ```
 >>> import beamhardening as bh
 
