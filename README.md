@@ -15,11 +15,18 @@ degrees: 0 is 12:00 and 90 is 3:00
 
 ## **How to use it**
 **1. Environment set up**
-Download requirements.txt. In a terminal type the following:
+Download requirements.txt. In a terminal, go to the folder where requirement.txt was downloaded and type the following:
 ```
 conda create --name <env> --file requirements.txt
 ```
 where *env* is the name of the desired environment
+
+If this returns an error, try the following:
+```
+conda create -n <env>
+conda activate <env>
+while read requirement; do conda install --yes $requirement; done < requirements.txt
+```
 
 **2. Download the module**
 In your working folder download the file *beamhardening.py*
