@@ -19,13 +19,13 @@ import cv2
 from sectorizedradialprofile.calculate_radial_profile import CalculateRadialProfile
 
 
-def bhsimple(z, input_folder = 'stack', output_folder = 'corrected',
+def simple(z, input_folder = 'stack', output_folder = 'corrected',
               angle_ini = -90, angle_fin = 90):
     '''
     Applies a beam hardening correction on a given tif sequence
     Correction is calculated on one given slide only
 
-    --> z             = slice to use for correction
+    --> z             = slice to use for correction, z>=1
     --> input_folder  = folder where the original tif sequence is stored
     --> output_folder = folder where the corrected tif sequence will be stored
     --> angle_ini     = initial angle for angle range for radial profile
@@ -145,5 +145,4 @@ def bhsimple(z, input_folder = 'stack', output_folder = 'corrected',
 
     return new
 
-a= bhsimple(20)
 
