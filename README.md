@@ -14,7 +14,7 @@ degrees: 0 is 12:00 and 90 is 3:00
 
 
 ## **How to use it**
-**1. Updated python libraries:**
+**1. Install the following python libraries:**
 - numba
 - scipy
 - cv2
