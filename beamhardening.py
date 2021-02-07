@@ -45,6 +45,10 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
     for f in os.listdir(input_folder):
         if f.endswith('.tif'):
             file_list.append(f)
+    else:
+        for f in os.listdir(input_folder):
+            if f.endswith('.tiff'):
+                file_list.append(f)
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -119,7 +123,6 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
     ref_z = np.full(working_data.shape, ref[0])
 
     @jit
-    # @jit(nopython=True, parallel=True) # Switch this on for parallel processing
     def calculate_radii(xrange, yrange, cx, cy):
         r = np.empty(working_data.shape, np.float64)
         for x in range(xrange):
