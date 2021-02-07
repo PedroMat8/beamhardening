@@ -14,35 +14,29 @@ degrees: 0 is 12:00 and 90 is 3:00
 
 
 ## **How to use it**
-**1. Environment set up**
-Download requirements.txt. In a terminal, go to the folder where requirement.txt was downloaded and type the following:
-```
-conda create --name <env> --file requirements.txt
-```
-where *env* is the name of the desired environment
+**1. Updated python libraries:**
+- numba
+- scipy
+- cv2
+- sectorizedradialprofile
 
-If this returns an error, try the following:
-```
-conda create -n <env>
-conda activate <env>
-while read requirement; do conda install --yes $requirement; done < requirements.txt
-```
+*sectorizedradialprofile* can be found here: [link](https://pypi.org/project/sectorizedradialprofile/)
 
-**2. Download the module**
+**2. Download the beamhardening.py**
 In your working folder download the file *beamhardening.py*
 
 **3. Store the input tif sequence in an appropriate folder**
-In your working directory create am input folder (i.e. *input*) and store your
-original tif sequence
+In your working directory create an input folder (i.e. *input*) and store your original tif sequence
 
-**4. How to use it**
+**4. Code example**
 ```
 >>> import beamhardening as bh
 
->>> bh.simple(1, input_folder = 'input')
+>>> bh.simple(100, input_folder = 'input')
 
 ```
 
+In the code above, *100* is the slice you want to use to calibrate the correction
+
 **5. Output**
-An output folder containing the corrected tif sequence will be created in your
-working directory
+An output folder containing the corrected tif sequence will be created in your working directory
