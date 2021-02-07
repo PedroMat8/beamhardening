@@ -97,7 +97,7 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
                                         [np.inf,np.inf,np.inf,np.inf,np.inf]),
                                   verbose=1)
 
-    ref = [i[0:400].mean()]*len(i)
+    ref = [i[int(np.max(r)/20):int(np.max(r)/10)].mean()]*len(i)
     corrected = i - (funy(wopt.x,r,A,C) - ref)
 
     fig2 = plt.figure()
