@@ -12,6 +12,8 @@ Correction is calculated on one given slide only
 degrees: 0 is 12:00 and 90 is 3:00
  - angle_fin     = final anle for angle range for radial profile (degrees)
 
+**Outputs**:
+The corrected images are saved in tif format 32bit, regardless the input format.
 
 ## **How to use it**
 **1. Install the following python libraries:**
