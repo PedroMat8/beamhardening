@@ -145,6 +145,10 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
 
         os.chdir(output_folder)
         new_n = np.float32(new)
+        
+        # for 16bit image
+        # I = cv2.normalize(new, None, 0 ,65.535, cv2.NORM_MINMAX, cv2.CV_16U)
+        # new_n = np.uint16(I)
         cv2.imwrite(image,new_n)
 
         os.chdir('..')
@@ -157,3 +161,4 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
     return new
 
 
+simple(1)
