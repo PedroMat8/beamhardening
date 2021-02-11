@@ -53,6 +53,7 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
 
+    file_list.sort()
     data_file = input_folder + '/' + file_list[z-1]
     # working_data = cv2.imread(data_file, cv2.IMREAD_GRAYSCALE)
     working_data = cv2.imread(data_file, -1)
