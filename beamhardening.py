@@ -28,7 +28,7 @@ from sectorizedradialprofile.calculate_radial_profile import CalculateRadialProf
 
 
 def simple(z, input_folder = 'stack', output_folder = 'corrected',
-              angle_ini = -90, angle_fin = 90):
+              angle_ini = -90, angle_fin = 90, bit=32):
     '''
     Applies a beam hardening correction on a given tif sequence
     Correction is calculated on one given slide only
@@ -143,13 +143,21 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
         mask = radii <= limit
         foo = funy(wopt.x,radii*mask,A,C)
         new = im_z*mask - foo*mask - ref_z*mask
-
-        os.chdir(output_folder)
-        new_n = np.float32(new)
         
-        # for 16bit image
-        # I = cv2.normalize(new, None, 0 ,65.535, cv2.NORM_MINMAX, cv2.CV_16U)
-        # new_n = np.uint16(I)
+        os.chdir(output_folder)
+        # new_n = np.float32(new)
+
+        if bit ==32:
+            new_n = np.float32(new)
+        
+        if bit ==16:
+            I = cv2.normalize(new, None, 0 ,65.535, cv2.NORM_MINMAX, cv2.CV_16U)
+            new_n = np.uint16(I)
+            
+        if bit ==8:
+            I = cv2.normalize(new, None, 0 ,255, cv2.NORM_MINMAX, cv2.CV_8U)
+            new_n = np.uint8(I)
+        
         cv2.imwrite(image,new_n)
 
         os.chdir('..')
@@ -159,7 +167,7 @@ def simple(z, input_folder = 'stack', output_folder = 'corrected',
     ax31.imshow(working_data)
     ax32.imshow(corrected)
 
-    return new
+    return new_n
 
 
-simple(1)
+simple(1, bit=32)

@@ -6,11 +6,13 @@ Correction is calculated on one given slide only
 
 **Inputs**:
  - z             = slice to use for correction, z >= 1
- - input_folder  = folder where the original tif sequence is stored
- - output_folder = folder where the corrected tif sequence will be stored
+ - input_folder  = folder where the original tif sequence is stored [default = 'stack']
+ - output_folder = folder where the corrected tif sequence will be stored [default = 'corrected']
  - angle_ini     = initial angle for angle range for radial profile. Angle in
-degrees: 0 is 12:00 and 90 is 3:00
- - angle_fin     = final anle for angle range for radial profile (degrees)
+degrees: 0 is 12:00 and 90 is 3:00. [defaut = -90]
+ - angle_fin     = final anle for angle range for radial profile (degrees) [default = 90]
+ - bit           = defines whether to save images in 8, 16 or 32 bits.
+                    valid values are :8, 16, 32 [default = 32]
 
 **Outputs**:
 The corrected images are saved in tif format 32bit, regardless the input format.
