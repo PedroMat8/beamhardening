@@ -1,0 +1,22 @@
+name: imaging
+channels:
+  - numba
+  - anaconda
+  - conda-forge
+  - defaults
+dependencies:
+  - imageio=2.8.0
+  - matplotlib=3.1.3
+  - matplotlib-base=3.1.3
+  - numpy=1.18.1
+  - opencv=4.0.1
+  - openpyxl=3.0.3
+  - pandas=1.0.3
+  - python=3.8.2
+  - scikit-image=0.17.2
+  - scipy=1.4.1
+  - spyder-kernels=1.9.4
+  - pip:
+    - pyfits==3.5
+    - sectorizedradialprofile==1.0.0
+prefix: C:\ProgramData\Anaconda3\envs\imaging
