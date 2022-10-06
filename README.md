@@ -14,8 +14,7 @@ degrees: 0 is 12:00 and 90 is 3:00. [defaut = -90]
  - bit           = defines whether to save images in 8, 16 or 32 bits.
                     valid values are :8, 16, 32 [default = 32]
 
-**Outputs**:
-The corrected images are saved in tif format 32bit, regardless the input format.
+**Outputs**: Sequence of corrected images.
 
 ## **How to use it**
 **1. Install the following python libraries:**
@@ -26,7 +25,7 @@ The corrected images are saved in tif format 32bit, regardless the input format.
 
 *sectorizedradialprofile* can be found here: [link](https://pypi.org/project/sectorizedradialprofile/)
 
-**2. Download the beamhardening.py**
+**2. Download beamhardening.py**
 In your working folder download the file *beamhardening.py*
 
 **3. Store the input tif sequence in an appropriate folder**
